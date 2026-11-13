@@ -1,0 +1,5 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyQuant paper</title><style>body{font-family:system-ui;background:#0b0e11;color:#e6e8eb;padding:24px}a{color:#4c8dff}</style></head>
+<body><p id="m">현재 주소 확인 중…</p><script>
+fetch('paper.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.text()).then(u=>{u=u.trim();if(/^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/.test(u)){document.getElementById('m').innerHTML='이동 중: <a href="'+u+'">'+u+'</a>';location.replace(u)}else document.getElementById('m').textContent='주소 없음'}).catch(()=>{document.getElementById('m').textContent='주소 읽기 실패'});
+</script></body></html>
